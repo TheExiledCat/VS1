@@ -18,8 +18,8 @@ public class Ladder : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.tag=="Player" Input.GetKey(KeyCode.w)){
+        //if(other.tag=="Player" Input.GetKey(KeyCode.w)){
 
-        }
+       // }
     }
 }
