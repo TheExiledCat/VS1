@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
+    string morebs;
     // Start is called before the first frame update
     void Start()
     {
-        
+        morebs = Constants.bs;
     }
 
     // Update is called once per frame
