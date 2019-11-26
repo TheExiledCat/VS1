@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-
-    public Collider[] closestNodes;
     [SerializeField]
-    float radius =1;
+    bool isEnd;
+    public Collider[] closestNodes;
+  
+  public   Vector3 radius;
     public LayerMask nodes;
+    public bool GetEnd()
+    {
+        return isEnd;
+    }
    public  Vector3 Position
     {
         get
@@ -19,16 +24,15 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        closestNodes = Physics.OverlapSphere(transform.position, radius,nodes);
+        closestNodes = Physics.OverlapBox(transform.position,radius,Quaternion.identity,nodes);
      
     }
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireCube(transform.position, radius);
     }
     public Collider[] GetNodes()
     {
-        Collider[] arr = { closestNodes[1], closestNodes[2] };
-        return arr;
+        return closestNodes;
     }
 }
