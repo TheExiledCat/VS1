@@ -7,7 +7,7 @@ public class Node : MonoBehaviour
     [SerializeField]
     bool isEnd;
     public Collider[] closestNodes;
-  
+    public bool isClickable=true;
   public   Vector3 radius;
     public LayerMask nodes;
     public bool GetEnd()

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7598217422642184543}
   - component: {fileID: 5079938123400076910}
+  - component: {fileID: 1177622914}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -46,6 +47,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1177622914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990155480926611277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1781c90906475499b023b155308520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 1
 --- !u!1 &8293285398237410449
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,11 +165,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: cone placeholder
       objectReference: {fileID: 0}
-    - target: {fileID: -8205571362833684013, guid: 95238edf336b2c24dbce6175b85c9501,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d6982b708393ee64ca1b7228720cd0e1, type: 2}
     - target: {fileID: -4216859302048453862, guid: 95238edf336b2c24dbce6175b85c9501,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -210,6 +220,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8205571362833684013, guid: 95238edf336b2c24dbce6175b85c9501,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6982b708393ee64ca1b7228720cd0e1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95238edf336b2c24dbce6175b85c9501, type: 3}
 --- !u!4 &4435402770891969449 stripped

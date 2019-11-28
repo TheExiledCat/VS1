@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
+    GameObject black;
+    GameObject ripple;
      Node current;
     bool searching = false;
     public Node target;
@@ -21,6 +23,8 @@ public class Pathfinding : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        black = (GameObject)Resources.Load("Particles/black"); 
+        ripple = (GameObject)Resources.Load("Particles/singular ripple");
         indexer = GameObject.FindObjectsOfType<Node>()[0];
         for (int i = 0; i < GameObject.FindObjectsOfType<Node>().Length; i++)
         {
@@ -35,9 +39,15 @@ public class Pathfinding : MonoBehaviour
 
         RaycastHit r;
         if(Physics.Raycast(ray,out r)){
-            if (r.collider.gameObject.GetComponent<Node>())
+           
+            if (r.collider.gameObject.GetComponent<Node>()&& r.collider.gameObject.GetComponent<Node>().isClickable )
             {
+
+                Destroy(Instantiate(ripple, r.transform.position, Quaternion.identity), 1);
+                Destroy(Instantiate(black, r.transform.position+(Vector3.down*0.45f), Quaternion.identity), 1);
                 target = r.collider.gameObject.GetComponent<Node>();
+               
+               
             }
         }
     }
