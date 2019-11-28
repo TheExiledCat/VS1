@@ -13,6 +13,7 @@ public class Pathfinding : MonoBehaviour
     Node previous;
     Node previous1;
     public float speed;
+    Ray ray;
     public Node GetCurrent()
     {
         return current;
@@ -28,12 +29,23 @@ public class Pathfinding : MonoBehaviour
         current = indexer;
         next = current;
     }
+    void SetTarget()
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+        RaycastHit r;
+        if(Physics.Raycast(ray,out r)){
+            if (r.collider.gameObject.GetComponent<Node>())
+            {
+                target = r.collider.gameObject.GetComponent<Node>();
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        
-        if(Vector3.Distance(transform.position,current.transform.position)<=0.0000000000000000000001f)
+        if (Input.GetMouseButtonDown(0)) SetTarget();
+        if(Vector3.Distance(transform.position,current.transform.position)<=0.0000000000000000000001f&&target)
         if(!searching&&current!=target)
         FindPath();
         if(next)
