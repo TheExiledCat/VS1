@@ -7,10 +7,7 @@ public class Rotat : MonoBehaviour
     public float rotSpeed = 20f;
     private float rotY;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     private void OnMouseDrag()
     {
