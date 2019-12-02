@@ -53,11 +53,16 @@ public class Pathfinding : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetMouseButtonDown(0)) SetTarget();
-        if(Vector3.Distance(transform.position,current.transform.position)<=0.0000000000000000000001f&&target)
-        if(!searching&&current!=target)
-        FindPath();
+    {   
+        if (Input.GetMouseButtonDown(0)) 
+            SetTarget();
+
+        if (Vector3.Distance(transform.position, current.transform.position) <= 0.0000000000000000000001f && target)
+        {
+            if (!searching && current != target)
+                FindPath();
+        }
+           
         if(next)
         Follow(next);
         print(current);

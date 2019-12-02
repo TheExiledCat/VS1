@@ -21,6 +21,7 @@ public class Node : MonoBehaviour
             return transform.position;
         }
     }
+    
     // Update is called once per frame
     void Update()
     {
