@@ -16,6 +16,7 @@ public class Pathfinding : MonoBehaviour
     Node previous1;
     public float speed;
     Ray ray;
+    public bool moving=false;
     public Node GetCurrent()
     {
         return current;
@@ -53,7 +54,8 @@ public class Pathfinding : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {   
+    {
+        moving = false;
         if (Input.GetMouseButtonDown(0)) 
             SetTarget();
 
@@ -63,7 +65,7 @@ public class Pathfinding : MonoBehaviour
                 FindPath();
         }
            
-        if(next)
+        if(next&&current!=target)
         Follow(next);
         print(current);
         if(closer)
@@ -71,7 +73,11 @@ public class Pathfinding : MonoBehaviour
     }
     void Follow(Node n)
     {
+        Vector3 lTargetDir = n.Position- transform.position;
+        lTargetDir.y = 0.0f;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(lTargetDir), Time.time * 3);
         print("moving");
+        moving = true;
         transform.position = Vector3.MoveTowards(transform.position,n.transform.position, speed/10);
     }
     void FindPath()
