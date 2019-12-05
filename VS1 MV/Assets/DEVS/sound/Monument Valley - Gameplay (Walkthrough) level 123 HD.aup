@@ -1,0 +1,194 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Monument Valley - Gameplay (Walkthrough) level 123 HD_data" version="1.3.0" audacityversion="2.3.1" sel0="6.3262124366" sel1="6.3262124366" vpos="0" h="0.0000000000" zoom="36.8308845674" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="Software" value="Lavf58.27.103"/>
+		<tag name="major_brand" value="mp42"/>
+		<tag name="minor_version" value="0"/>
+		<tag name="compatible_brands" value="isommp42"/>
+	</tags>
+	<wavetrack name="Monument Valley - Gameplay (Walkthrough) level 123 HD" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="6864169">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808527.au" len="143315" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+				<waveblock start="143315">
+					<simpleblockfile filename="e0808d98.au" len="178776" min="-0.373034" max="0.366984" rms="0.047098"/>
+				</waveblock>
+				<waveblock start="322091">
+					<simpleblockfile filename="e08089e6.au" len="193972" min="-0.064767" max="0.037396" rms="0.002639"/>
+				</waveblock>
+				<waveblock start="516063">
+					<simpleblockfile filename="e080899f.au" len="192249" min="-0.104904" max="0.118557" rms="0.006482"/>
+				</waveblock>
+				<waveblock start="708312">
+					<simpleblockfile filename="e0808e0a.au" len="192250" min="-0.166571" max="0.170021" rms="0.023671"/>
+				</waveblock>
+				<waveblock start="900562">
+					<simpleblockfile filename="e0808829.au" len="262144" min="-0.615031" max="0.571132" rms="0.08005"/>
+				</waveblock>
+				<waveblock start="1162706">
+					<simpleblockfile filename="e0808fc2.au" len="262144" min="-0.601679" max="0.624394" rms="0.08395"/>
+				</waveblock>
+				<waveblock start="1424850">
+					<simpleblockfile filename="e08085d3.au" len="262144" min="-0.349974" max="0.406509" rms="0.068831"/>
+				</waveblock>
+				<waveblock start="1686994">
+					<simpleblockfile filename="e0808ef6.au" len="262144" min="-0.238923" max="0.267207" rms="0.01549"/>
+				</waveblock>
+				<waveblock start="1949138">
+					<simpleblockfile filename="e08085b1.au" len="262144" min="-0.007153" max="0.009286" rms="0.000311"/>
+				</waveblock>
+				<waveblock start="2211282">
+					<simpleblockfile filename="e0808701.au" len="262144" min="-0.430122" max="0.409697" rms="0.114262"/>
+				</waveblock>
+				<waveblock start="2473426">
+					<simpleblockfile filename="e0808c5a.au" len="262144" min="-0.286861" max="0.288055" rms="0.051304"/>
+				</waveblock>
+				<waveblock start="2735570">
+					<simpleblockfile filename="e08087ce.au" len="262144" min="-0.245099" max="0.239384" rms="0.027764"/>
+				</waveblock>
+				<waveblock start="2997714">
+					<simpleblockfile filename="e0808462.au" len="262144" min="-0.029662" max="0.034066" rms="0.003028"/>
+				</waveblock>
+				<waveblock start="3259858">
+					<simpleblockfile filename="e0808560.au" len="262144" min="-0.445533" max="0.410292" rms="0.109709"/>
+				</waveblock>
+				<waveblock start="3522002">
+					<simpleblockfile filename="e0808d3f.au" len="262144" min="-0.536559" max="0.561622" rms="0.098649"/>
+				</waveblock>
+				<waveblock start="3784146">
+					<simpleblockfile filename="e08081f5.au" len="262144" min="-0.750427" max="0.597142" rms="0.077378"/>
+				</waveblock>
+				<waveblock start="4046290">
+					<simpleblockfile filename="e0808adc.au" len="262144" min="-0.003987" max="0.003466" rms="0.000315"/>
+				</waveblock>
+				<waveblock start="4308434">
+					<simpleblockfile filename="e0808e1e.au" len="262144" min="-0.16017" max="0.16035" rms="0.019674"/>
+				</waveblock>
+				<waveblock start="4570578">
+					<simpleblockfile filename="e0808a4f.au" len="262144" min="-0.516352" max="0.527088" rms="0.062642"/>
+				</waveblock>
+				<waveblock start="4832722">
+					<simpleblockfile filename="e080873e.au" len="262144" min="-0.330815" max="0.294899" rms="0.035974"/>
+				</waveblock>
+				<waveblock start="5094866">
+					<simpleblockfile filename="e080883d.au" len="262144" min="-0.152706" max="0.156256" rms="0.017731"/>
+				</waveblock>
+				<waveblock start="5357010">
+					<simpleblockfile filename="e08084eb.au" len="262144" min="-0.2522" max="0.253487" rms="0.022754"/>
+				</waveblock>
+				<waveblock start="5619154">
+					<simpleblockfile filename="e0808d5e.au" len="262144" min="-0.544098" max="0.58665" rms="0.064332"/>
+				</waveblock>
+				<waveblock start="5881298">
+					<simpleblockfile filename="e0808dba.au" len="262144" min="-0.160315" max="0.158349" rms="0.017382"/>
+				</waveblock>
+				<waveblock start="6143442">
+					<simpleblockfile filename="e0808db1.au" len="262144" min="-0.214623" max="0.272208" rms="0.027998"/>
+				</waveblock>
+				<waveblock start="6405586">
+					<simpleblockfile filename="e08083f9.au" len="262144" min="-0.448402" max="0.469023" rms="0.039038"/>
+				</waveblock>
+				<waveblock start="6667730">
+					<simpleblockfile filename="e08081a4.au" len="196439" min="-0.587197" max="0.550181" rms="0.119047"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Monument Valley - Gameplay (Walkthrough) level 123 HD" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="6864169">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808ab8.au" len="143315" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+				<waveblock start="143315">
+					<simpleblockfile filename="e0808add.au" len="178776" min="-0.373034" max="0.366984" rms="0.047098"/>
+				</waveblock>
+				<waveblock start="322091">
+					<simpleblockfile filename="e0808e25.au" len="193972" min="-0.064767" max="0.037396" rms="0.002639"/>
+				</waveblock>
+				<waveblock start="516063">
+					<simpleblockfile filename="e080880b.au" len="192249" min="-0.104904" max="0.118557" rms="0.006482"/>
+				</waveblock>
+				<waveblock start="708312">
+					<simpleblockfile filename="e0808aba.au" len="192250" min="-0.166571" max="0.170021" rms="0.023671"/>
+				</waveblock>
+				<waveblock start="900562">
+					<simpleblockfile filename="e080803b.au" len="262144" min="-0.615031" max="0.571132" rms="0.08005"/>
+				</waveblock>
+				<waveblock start="1162706">
+					<simpleblockfile filename="e0808c5b.au" len="262144" min="-0.601679" max="0.624394" rms="0.08395"/>
+				</waveblock>
+				<waveblock start="1424850">
+					<simpleblockfile filename="e0808134.au" len="262144" min="-0.349974" max="0.406509" rms="0.068831"/>
+				</waveblock>
+				<waveblock start="1686994">
+					<simpleblockfile filename="e0808848.au" len="262144" min="-0.238923" max="0.267207" rms="0.01549"/>
+				</waveblock>
+				<waveblock start="1949138">
+					<simpleblockfile filename="e08085d1.au" len="262144" min="-0.007153" max="0.009286" rms="0.000311"/>
+				</waveblock>
+				<waveblock start="2211282">
+					<simpleblockfile filename="e08086e9.au" len="262144" min="-0.430122" max="0.409697" rms="0.114262"/>
+				</waveblock>
+				<waveblock start="2473426">
+					<simpleblockfile filename="e08085dd.au" len="262144" min="-0.286861" max="0.288055" rms="0.051304"/>
+				</waveblock>
+				<waveblock start="2735570">
+					<simpleblockfile filename="e0808a94.au" len="262144" min="-0.245099" max="0.239384" rms="0.027764"/>
+				</waveblock>
+				<waveblock start="2997714">
+					<simpleblockfile filename="e08084d0.au" len="262144" min="-0.029662" max="0.034066" rms="0.003028"/>
+				</waveblock>
+				<waveblock start="3259858">
+					<simpleblockfile filename="e080840c.au" len="262144" min="-0.445533" max="0.410292" rms="0.109709"/>
+				</waveblock>
+				<waveblock start="3522002">
+					<simpleblockfile filename="e0808717.au" len="262144" min="-0.536559" max="0.561622" rms="0.098649"/>
+				</waveblock>
+				<waveblock start="3784146">
+					<simpleblockfile filename="e08085f4.au" len="262144" min="-0.750427" max="0.597142" rms="0.077378"/>
+				</waveblock>
+				<waveblock start="4046290">
+					<simpleblockfile filename="e0808567.au" len="262144" min="-0.003987" max="0.003466" rms="0.000315"/>
+				</waveblock>
+				<waveblock start="4308434">
+					<simpleblockfile filename="e0808699.au" len="262144" min="-0.16017" max="0.16035" rms="0.019674"/>
+				</waveblock>
+				<waveblock start="4570578">
+					<simpleblockfile filename="e080808b.au" len="262144" min="-0.516352" max="0.527088" rms="0.062642"/>
+				</waveblock>
+				<waveblock start="4832722">
+					<simpleblockfile filename="e0808678.au" len="262144" min="-0.330815" max="0.294899" rms="0.035974"/>
+				</waveblock>
+				<waveblock start="5094866">
+					<simpleblockfile filename="e080804b.au" len="262144" min="-0.152706" max="0.156256" rms="0.017731"/>
+				</waveblock>
+				<waveblock start="5357010">
+					<simpleblockfile filename="e0808a11.au" len="262144" min="-0.2522" max="0.253487" rms="0.022754"/>
+				</waveblock>
+				<waveblock start="5619154">
+					<simpleblockfile filename="e0808fce.au" len="262144" min="-0.544098" max="0.58665" rms="0.064332"/>
+				</waveblock>
+				<waveblock start="5881298">
+					<simpleblockfile filename="e0808d82.au" len="262144" min="-0.160315" max="0.158349" rms="0.017382"/>
+				</waveblock>
+				<waveblock start="6143442">
+					<simpleblockfile filename="e0808208.au" len="262144" min="-0.214623" max="0.272208" rms="0.027998"/>
+				</waveblock>
+				<waveblock start="6405586">
+					<simpleblockfile filename="e080806b.au" len="262144" min="-0.448402" max="0.469023" rms="0.039038"/>
+				</waveblock>
+				<waveblock start="6667730">
+					<simpleblockfile filename="e0808d2e.au" len="196439" min="-0.587197" max="0.550181" rms="0.119047"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Monument Valley - Gameplay (Walkthrough) level 123 HD" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+	<wavetrack name="Monument Valley - Gameplay (Walkthrough) level 123 HD" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0" colorindex="0"/>
+</project>
