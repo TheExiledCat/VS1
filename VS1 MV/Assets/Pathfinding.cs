@@ -12,10 +12,11 @@ public class Pathfinding : MonoBehaviour
     Node closer;
     Node next;
     Node indexer;
-    Node previous;
+   public  Node previous;
     Node previous1;
     public float speed;
     Ray ray;
+    public bool climbing;
     public bool moving=false;
     public Node GetCurrent()
     {
@@ -37,7 +38,7 @@ public class Pathfinding : MonoBehaviour
     void SetTarget()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+        
         RaycastHit r;
         if(Physics.Raycast(ray,out r)){
            
@@ -55,6 +56,9 @@ public class Pathfinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        climbing = false;
+        if (!current.isClickable) climbing = true;
+      
         moving = false;
         if (Input.GetMouseButtonDown(0)) 
             SetTarget();
@@ -67,15 +71,18 @@ public class Pathfinding : MonoBehaviour
            
         if(next&&current!=target)
         Follow(next);
+        if (next == target&&Vector3.Distance(transform.position,target.Position)>=0.0000000000000000001f) Follow(next);
         print(current);
-        if(closer)
-        print(closer);
+
+        
     }
     void Follow(Node n)
     {
-        Vector3 lTargetDir = n.Position- transform.position;
-        lTargetDir.y = 0.0f;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(lTargetDir), Time.time * 3);
+        Vector3 lTargetDir = n.Position - transform.position;
+        lTargetDir.y = 0;
+
+        if (!climbing)
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lTargetDir), 100);
         print("moving");
         moving = true;
         transform.position = Vector3.MoveTowards(transform.position,n.transform.position, speed/10);
@@ -118,6 +125,7 @@ public class Pathfinding : MonoBehaviour
 
         }
         next = closer;
+       
         searching = false;
         current = next;
     }
