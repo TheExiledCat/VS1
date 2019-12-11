@@ -63,7 +63,7 @@ public class Pathfinding : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
             SetTarget();
 
-        if (Vector3.Distance(transform.position, current.transform.position) <= 0.0000000000000000000001f && target)
+        if (Vector3.Distance(transform.position, current.transform.position) <= 0.000000000000000000000000000000000000000000001f && target)
         {
             if (!searching && current != target)
                 FindPath();
@@ -71,7 +71,8 @@ public class Pathfinding : MonoBehaviour
            
         if(next&&current!=target)
         Follow(next);
-        if (next == target&&Vector3.Distance(transform.position,target.Position)>=0.0000000000000000001f) Follow(next);
+        if (next == target&&Vector3.Distance(transform.position,target.Position)>=0.000000000000000000000000000000000000000000001f) Follow(next);
+
         print(current);
 
         
@@ -85,7 +86,7 @@ public class Pathfinding : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lTargetDir), 100);
         print("moving");
         moving = true;
-        transform.position = Vector3.MoveTowards(transform.position,n.transform.position, speed/10);
+        transform.position = Vector3.MoveTowards(transform.position,n.transform.position, speed/1000);
     }
     void FindPath()
     {
