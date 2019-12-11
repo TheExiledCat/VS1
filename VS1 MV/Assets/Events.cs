@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Events : MonoBehaviour
 {
+    public GameObject endscreen;
+    public Node End;
    public  Node teleportNode;
     public GameObject kopstuk;
     public GameObject totem;
@@ -24,9 +26,35 @@ public class Events : MonoBehaviour
     public AudioClip rotlock;
     public AudioClip pass;
     Pathfinding p;
+    public GameObject[] startscreen;
     // Start is called before the first frame update
+    IEnumerator StartUp()
+    {
+
+           for(float j=1; j > 0; j -= Time.deltaTime/4)
+            {
+                startscreen[0].GetComponent<Image>().color = new Color(0, 0, 0, j);
+            startscreen[1].GetComponent<Image>().color = new Color(startscreen[1].GetComponent<Image>().color.r, startscreen[1].GetComponent<Image>().color.g, startscreen[1].GetComponent<Image>().color.b, j);
+            startscreen[2].GetComponent<Image>().color = new Color(0, 0, 0, j);
+            yield return null;
+        }
+        
+    
+    }
+    IEnumerator gameOver()
+    {
+        for (float j = 0; j < 1; j += Time.deltaTime / 2)
+        {
+            endscreen.transform.parent.gameObject.SetActive(true);
+            endscreen.GetComponent<Image>().color = new Color(1, 1, 1, j);
+            startscreen[0].GetComponent<Image>().color = new Color(0, 0, 0, j);
+            yield return null;
+        }
+        yield return null;
+    }
     void Start()
     {
+        StartCoroutine(StartUp());
         risen = false;
         tower = false;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -50,6 +78,7 @@ public class Events : MonoBehaviour
         realplat.SetActive(true);
         yield return new WaitForEndOfFrame();
         p.SetCurrent(teleportNode);
+        
         player.transform.position = teleportNode.Position;
 
         yield return null;
@@ -77,7 +106,7 @@ public class Events : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (p.GetCurrent() == End) StartCoroutine(gameOver());
           if (p.GetCurrent().gameObject.CompareTag("locker") )Lock(true);
             else Lock(false);
 

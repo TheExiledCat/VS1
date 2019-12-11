@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
+    public AudioClip walk;
     GameObject black;
     GameObject ripple;
      Node current;
@@ -22,7 +23,10 @@ public class Pathfinding : MonoBehaviour
     RaycastHit r;
     public void SetCurrent(Node n)
     {
+
         current = n;
+        target = current;
+        next = current;
     }
     public Node GetCurrent()
     {
@@ -50,9 +54,9 @@ public class Pathfinding : MonoBehaviour
            
             if (r.collider.gameObject.GetComponent<Node>()&& r.collider.gameObject.GetComponent<Node>().isClickable )
             {
-
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(walk);
                 Destroy(Instantiate(ripple, r.transform.position, Quaternion.identity), 1);
-                Destroy(Instantiate(black, r.transform.position+(Vector3.down*0.45f), Quaternion.identity), 1);
+                Destroy(Instantiate(black, r.transform.position+(Vector3.down*0.045f), Quaternion.identity), 1);
                 target = r.collider.gameObject.GetComponent<Node>();
                
                
