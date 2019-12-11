@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 8807d45559dba164898d29f21c1e7d31
+guid: 7b476413d5e5cfe43967de8ef944a58b
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: -529086017489758698
-    second: climb
+      74: 5872040933184907522
+    second: climb afstap
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,18 +35,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: climb
-      takeName: climb
-      internalID: -529086017489758698
-      firstFrame: 1
-      lastFrame: 13
+      name: climb afstap
+      takeName: climb afstap
+      internalID: 5872040933184907522
+      firstFrame: 111
+      lastFrame: 123
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

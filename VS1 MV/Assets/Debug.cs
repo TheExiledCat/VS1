@@ -8,9 +8,14 @@ public class Debug : MonoBehaviour
     bool debug = false;
     Material[] mats;
     int[] indexes;
+    GameObject player;
+    Node prev;
+
     // Update is called once per frame
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        
         mats = new Material[ GameObject.FindObjectsOfType<Collider>().Length];
         indexes = new int[GameObject.FindObjectsOfType<Collider>().Length];
         for (int i = 0; i < GameObject.FindObjectsOfType<Node>().Length; i++)
@@ -20,6 +25,10 @@ public class Debug : MonoBehaviour
     }
     void Update()
     {
+       
+        prev = player.GetComponent<Pathfinding>().previous;
+        if (prev)
+            prev.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
 
         if (Input.GetKeyDown(KeyCode.F1))
         {
@@ -39,7 +48,7 @@ public class Debug : MonoBehaviour
             {
                 for (int i = 0; i < GameObject.FindObjectsOfType<MeshRenderer>().Length; i++)
                 {
-
+                    GameObject.FindObjectsOfType<MeshRenderer>()[i].GetComponent<MeshRenderer>().enabled = false;
                     GameObject.FindObjectsOfType<MeshRenderer>()[i].GetComponent<MeshRenderer>().material = mats[i];
 
 
@@ -52,5 +61,7 @@ public class Debug : MonoBehaviour
                 GameObject.FindObjectsOfType<Node>()[i].transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled = debug;
             }
         }
+
+        player.GetComponent<Pathfinding>().GetCurrent().gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = !debug;
     }
 }
