@@ -18,6 +18,8 @@ public class Pathfinding : MonoBehaviour
     Ray ray;
     public bool climbing;
     public bool moving=false;
+    public LayerMask nodes;
+    RaycastHit r;
     public Node GetCurrent()
     {
         return current;
@@ -39,8 +41,8 @@ public class Pathfinding : MonoBehaviour
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         
-        RaycastHit r;
-        if(Physics.Raycast(ray,out r)){
+       
+        if(Physics.Raycast(ray,out r,nodes)){
            
             if (r.collider.gameObject.GetComponent<Node>()&& r.collider.gameObject.GetComponent<Node>().isClickable )
             {
@@ -53,14 +55,15 @@ public class Pathfinding : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
+        
         climbing = false;
         if (!current.isClickable) climbing = true;
       
         moving = false;
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(1)) 
             SetTarget();
 
         if (Vector3.Distance(transform.position, current.transform.position) <= 0.000000000000000000000000000000000000000000001f && target)
@@ -74,13 +77,13 @@ public class Pathfinding : MonoBehaviour
         if (next == target&&Vector3.Distance(transform.position,target.Position)>=0.000000000000000000000000000000000000000000001f) Follow(next);
 
         print(current);
-
+        
         
     }
     void Follow(Node n)
     {
         Vector3 lTargetDir = n.Position - transform.position;
-        lTargetDir.y = 0;
+        lTargetDir.y = 0.0f;
 
         if (!climbing)
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lTargetDir), 100);

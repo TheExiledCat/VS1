@@ -25,8 +25,8 @@ public class Anims : MonoBehaviour
      
         
         
-        if(climbing&&lookpoint)
-            transform.LookAt(new Vector3(lookpoint.transform.position.x, transform.position.y, lookpoint.transform.position.z));
+        //if(climbing&&lookpoint)
+            //transform.LookAt(new Vector3(lookpoint.transform.position.x, transform.position.y, lookpoint.transform.position.z));
 
 
 
