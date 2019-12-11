@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
 guid: e4774b57e9220ee4bb0ab679aa442a33
-=======
-guid: 704c4eb861bb00742a6f33f63d8ee35a
->>>>>>> bb150f4bfddf0fb1de5b43d32e93cd66410c8362
-=======
-guid: 704c4eb861bb00742a6f33f63d8ee35a
->>>>>>> bb150f4bfddf0fb1de5b43d32e93cd66410c8362
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -54,15 +46,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-      loopTime: 0
-=======
       loopTime: 1
->>>>>>> bb150f4bfddf0fb1de5b43d32e93cd66410c8362
-=======
-      loopTime: 1
->>>>>>> bb150f4bfddf0fb1de5b43d32e93cd66410c8362
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -78,7 +62,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 100
     isReadable: 0
   meshes:
     lODScreenPercentages: []
