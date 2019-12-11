@@ -9,7 +9,10 @@ public class Events : MonoBehaviour
     public Node button1;
     public Node button2;
     public GameObject platform;
+    public GameObject realplat;
     public float targetY;
+    public float targetY1;
+    public GameObject block;
     bool risen;
     bool tower;
     GameObject player;
@@ -27,12 +30,15 @@ public class Events : MonoBehaviour
         print("rising");
         risen = true;
         float dist = targetY - platform.transform.position.y;
+        float dist1 = 0.55f - block.transform.position.y;
 
-        for(int i=0; i<180;i++)
+        for (int i=0; i<180;i++)
         {
             platform.transform.position += Vector3.up * (dist / 180);
+            block.transform.position += Vector3.up * (dist1 / 180);
             yield return new WaitForEndOfFrame();
         }
+        realplat.SetActive(true);
        yield  return null;
     }
     // Update is called once per frame
