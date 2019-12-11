@@ -20,6 +20,10 @@ public class Pathfinding : MonoBehaviour
     public bool moving=false;
     public LayerMask nodes;
     RaycastHit r;
+    public void SetCurrent(Node n)
+    {
+        current = n;
+    }
     public Node GetCurrent()
     {
         return current;

@@ -26,9 +26,9 @@ public class Debug : MonoBehaviour
     void Update()
     {
        
-        prev = player.GetComponent<Pathfinding>().previous;
-        if (prev)
-            prev.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+      //  prev = player.GetComponent<Pathfinding>().previous;
+       // if (prev)
+         //   prev.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
 
         if (Input.GetKeyDown(KeyCode.F1))
         {
@@ -36,20 +36,20 @@ public class Debug : MonoBehaviour
             if (debug)
             {
 
-                for (int i = 0; i < GameObject.FindObjectsOfType<MeshRenderer>().Length; i++)
+                for (int i = 0; i < GameObject.FindObjectsOfType<Node>().Length; i++)
                 {
 
-                    mats[i] = GameObject.FindObjectsOfType<MeshRenderer>()[i].GetComponent<MeshRenderer>().material;
+                    mats[i] = GameObject.FindObjectsOfType<Node>()[i].transform.GetChild(0).GetComponent<MeshRenderer>().material;
                     indexes[i] = i;
-                    GameObject.FindObjectsOfType<MeshRenderer>()[i].GetComponent<MeshRenderer>().material = wire;
+                    GameObject.FindObjectsOfType<Node>()[i].transform.GetChild(0).GetComponent<MeshRenderer>().material = wire;
                 }
             }
             else
             {
-                for (int i = 0; i < GameObject.FindObjectsOfType<MeshRenderer>().Length; i++)
+                for (int i = 0; i < GameObject.FindObjectsOfType<Node>().Length; i++)
                 {
-                    GameObject.FindObjectsOfType<MeshRenderer>()[i].GetComponent<MeshRenderer>().enabled = false;
-                    GameObject.FindObjectsOfType<MeshRenderer>()[i].GetComponent<MeshRenderer>().material = mats[i];
+                    GameObject.FindObjectsOfType<Node>()[i].transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+                    GameObject.FindObjectsOfType<Node>()[i].transform.GetChild(0).GetComponent<MeshRenderer>().material = mats[i];
 
 
                 }
@@ -62,6 +62,6 @@ public class Debug : MonoBehaviour
             }
         }
 
-        player.GetComponent<Pathfinding>().GetCurrent().gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = !debug;
+       // player.GetComponent<Pathfinding>().GetCurrent().gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = !debug;
     }
 }
