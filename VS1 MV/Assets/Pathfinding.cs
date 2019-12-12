@@ -58,8 +58,7 @@ public class Pathfinding : MonoBehaviour
                 Destroy(Instantiate(ripple, r.transform.position, Quaternion.identity), 1);
                 Destroy(Instantiate(black, r.transform.position+(Vector3.down*0.045f), Quaternion.identity), 1);
                 target = r.collider.gameObject.GetComponent<Node>();
-               
-               
+
             }
         }
     }
